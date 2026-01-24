@@ -21,7 +21,6 @@ namespace ConsoleApp1
             Console.WriteLine("Привет, {0}, как дела?", myName); //а тут выводим эту строку, но почему она ноль, а не название переменной я в душе не знаю
             Console.WriteLine("Press any key.");
             Console.ReadKey();
-            Console.ReadKey();
 
         }
     }
