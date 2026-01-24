@@ -18,15 +18,24 @@ namespace Lab2_1
     }
     enum Monts
     {
-        janyary,
-        febryary,
-        mart
+        january,
+        february,
+        march,
+        april,
+        may,
+        june,
+        july,
+        august,
+        september,
+        october,
+        november,
+        december
     }
 class Human
     {
-        public string Name { get; set; };
-        public string FirstName { get; set; };
-        public int Age { };
+        public string Name { get; set; }
+        public string FirstName { get; set; }
+        public int Age { get; set; }
 
     }
     internal class Enum
@@ -34,8 +43,29 @@ class Human
        
         static void Main(string[] args)
         {
-            Console.WriteLine(DayWeek.Friday);
+            while (true) {
+                Console.Clear();
+                Console.WriteLine("Введи число месяца (или 0 для выхода):");
+            string input = Console.ReadLine();
+                int i;
+                if (!int.TryParse(input, out i))
+                {
+                    Console.WriteLine("Ошибка: нужно ввести число!"); continue; // возвращаемся в начало цикла }
+                }
+                if (i == 0) { Console.WriteLine("Выход из программы..."); break; }
+                i = i - 1;
+                if (i >= 0 && i < 12)
+                {
+                    Console.WriteLine((Monts)i);
+                }
+                else
+                {
+                    Console.WriteLine("Нет такого месяца у тебя, либо добавь, либо напиши другой вариант");
 
+                }
+                Console.WriteLine("Нажми любую клавишу..."); 
+                Console.ReadKey();
+            }                 
         }
     }
 }
