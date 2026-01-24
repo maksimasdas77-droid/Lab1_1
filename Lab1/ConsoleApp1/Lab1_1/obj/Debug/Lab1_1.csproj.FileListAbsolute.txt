@@ -1,0 +1,8 @@
+D:\учеба\БГУИР\ОСПС#\Lab1\ConsoleApp1\Lab1_1\bin\Debug\Lab1_1.exe.config
+D:\учеба\БГУИР\ОСПС#\Lab1\ConsoleApp1\Lab1_1\bin\Debug\Lab1_1.exe
+D:\учеба\БГУИР\ОСПС#\Lab1\ConsoleApp1\Lab1_1\bin\Debug\Lab1_1.pdb
+D:\учеба\БГУИР\ОСПС#\Lab1\ConsoleApp1\Lab1_1\obj\Debug\Lab1_1.csproj.AssemblyReference.cache
+D:\учеба\БГУИР\ОСПС#\Lab1\ConsoleApp1\Lab1_1\obj\Debug\Lab1_1.csproj.CoreCompileInputs.cache
+D:\учеба\БГУИР\ОСПС#\Lab1\ConsoleApp1\Lab1_1\obj\Debug\Lab1_1.exe
+D:\учеба\БГУИР\ОСПС#\Lab1\ConsoleApp1\Lab1_1\obj\Debug\Lab1_1.pdb
+D:\учеба\БГУИР\ОСПС#\Lab1\ConsoleApp1\Lab1_1\obj\Debug\Lab1_1.exe.config
