@@ -31,13 +31,6 @@ namespace Lab2_1
         november,
         december
     }
-class Human
-    {
-        public string Name { get; set; }
-        public string FirstName { get; set; }
-        public int Age { get; set; }
-
-    }
     internal class Enum
     {
        
