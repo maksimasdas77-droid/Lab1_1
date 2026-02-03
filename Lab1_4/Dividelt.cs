@@ -28,6 +28,12 @@ namespace Lab1_4
             catch (Exception e)
             {
                 Console.WriteLine("деление на ноль: {0}", e);
+
+
+
+
+
+                //обновление для примера
             }
         }
     }

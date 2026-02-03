@@ -16,7 +16,9 @@ namespace BankAccount2
         FixedTermDeposit,
         SavingsAccount,
         PensionDeposit,
-        StudentDeposit
+        StudentDeposit,
+        newelement,
+        ouirghiufdbjfkdb
     }
     internal class Program
     {
@@ -80,6 +82,9 @@ namespace BankAccount2
                                 break;
                             case AccountType.StudentDeposit:
                                 Console.WriteLine("Описание: Студенческий депозит");
+                                break;
+                            case AccountType.newelement:
+                                Console.WriteLine("Описание: новый элемент 1");
                                 break;
                         }
                     }
