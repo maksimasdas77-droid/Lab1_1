@@ -19,7 +19,7 @@ namespace BankAccountWithStructure
         }
         public void DisplayAccountInfo()
         {
-            Console.WriteLine("=== Информация о банковском счете ===");
+            //Console.WriteLine("=== Информация о банковском счете ===");
             Console.WriteLine($"Номер счета: {accNo}");
             Console.WriteLine($"Баланс: {accBalance:C}"); // :C - формат валюты
             Console.WriteLine($"Тип счета: {accType}");
