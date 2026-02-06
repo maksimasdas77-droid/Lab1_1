@@ -42,7 +42,7 @@ namespace BankAccountWithStructure
             //myAccount.DisplayAccountInfo();
 
             List<BankAccount> accounts = new List<BankAccount>();
-            bool running = true; 
+            bool running = true;
             while (running)
             {
                 Console.Clear();
@@ -52,70 +52,66 @@ namespace BankAccountWithStructure
                 Console.WriteLine("3 - выход");
                 Console.WriteLine("выберите пункт:");
                 int choice = int.Parse(Console.ReadLine());
-                    switch ((choice))
-                    {
-                        case 1:
-                            Console.Clear();
-                            Console.WriteLine("\n выберите тип счета");
-                            int index = 1;
+                switch ((choice))
+                {
+                    case 1:
+                        Console.Clear();
+                        Console.WriteLine("\n выберите тип счета");
+                        int index = 1;
 
-                            foreach (var type in Enum.GetValues(typeof(AccountType)))
+                        foreach (var type in Enum.GetValues(typeof(AccountType)))
+                        {
+                            Console.WriteLine($"{index} - {type}");
+                            index++;
+                        }
+
+                        Console.Write("Введите номер типа: ");
+                        int typeNumber = int.Parse(Console.ReadLine());
+                        typeNumber--;
+                        AccountType selectedType = (AccountType)typeNumber;
+
+                        Console.Write("Введите номер счёта: ");
+                        long number = long.Parse(Console.ReadLine());
+
+                        Console.Write("Введите сумму: ");
+                        decimal money = decimal.Parse(Console.ReadLine());
+                        accounts.Add(new BankAccount(number, money, selectedType));
+
+                        Console.WriteLine("Счёт успешно создан!");
+                        Console.ReadLine();
+                        break;
+                    case 2:
+                        Console.Clear();
+                        Console.WriteLine("\n=== Все счета ===");
+
+                        if (accounts.Count == 0)
+                        {
+                            Console.WriteLine("Счетов пока нет.");
+
+                        }
+                        else
+                        {
+                            foreach (var acc in accounts)
                             {
-                                Console.WriteLine($"{index} - {type}");
-                                index++;
+                                acc.DisplayAccountInfo();
+                                Console.WriteLine();
+
                             }
 
-                            Console.Write("Введите номер типа: ");
-                            int typeNumber = int.Parse(Console.ReadLine());
-                            typeNumber--;
-                            AccountType selectedType = (AccountType)typeNumber;
+                        }
+                        Console.ReadLine();
+                        break;
 
-                            Console.Write("Введите номер счёта: ");
-                            long number = long.Parse(Console.ReadLine());
+                    case 3:
+                        running = false;
+                        break;
 
-                            Console.Write("Введите сумму: ");
-                            decimal money = decimal.Parse(Console.ReadLine());
-                            accounts.Add(new BankAccount(number, money, selectedType));
-
-                            Console.WriteLine("Счёт успешно создан!");
-                            Console.ReadLine();
-                            break;
-                        case 2:
-                            Console.Clear();
-                            Console.WriteLine("\n=== Все счета ===");
-
-                            if (accounts.Count == 0)
-                            {
-                                Console.WriteLine("Счетов пока нет.");
-
-                            }
-                            else
-                            {
-                                foreach (var acc in accounts)
-                                {
-                                    acc.DisplayAccountInfo();
-                                    Console.WriteLine();
-
-                                }
-
-                            }
-                            Console.ReadLine();
-                            break;
-
-                        case 3:
-                            running = false;
-                            break;
-
-                        default:
-                            Console.WriteLine("Неверный пункт меню.");
-                            Console.ReadLine();
-                            break;
-                    }
-
+                    default:
+                        Console.WriteLine("Неверный пункт меню.");
+                        Console.ReadLine();
+                        break;
+                }
             }
-
-
-
         }
     }
 }
